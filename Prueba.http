@@ -1,0 +1,46 @@
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "userName":"prueba3",
+  "email": "PRUEBA3@gmail.com",
+  "password": "contras234"
+}
+
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "userName":"prueba3",
+  "email": "PRUEBA3@gmail.com",
+  "password": "contras234"
+}
+
+###
+
+POST http://localhost:3000/api/habit/personalizado
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJQUlVFQkEzQGdtYWlsLmNvbSIsInVzZXJOYW1lIjoicHJ1ZWJhMyIsImlhdCI6MTc0NjMzNDkwNywiZXhwIjoxNzQ2MzM4NTA3fQ.JdFRdHf1GZ2l0xtLOjNcucOoySWOBIbuz2ZbC3B9r5g
+
+{
+    id: 1,
+    userId: 1,
+    habitTemplateId: null,
+    name: 'Estudiar',
+    description: 'Estudiar',
+    icon: '../img/gestorhabitos/personalizado.png',
+    frequency: { days: [Array], type: 'weekly' },
+    reminder: true,
+    fieldValues: { unit: 'min', value: '1' },
+    startDate: 2025-05-05T00:00:00.000Z,
+    isActive: true
+}
+
+
+###
+
+GET http://localhost:3000/api/inicio/principalScr
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJQUlVFQkFAZ21haWwuY29tIiwidXNlck5hbWUiOiJwcnVlYmEiLCJpYXQiOjE3NDU5NzE5MjYsImV4cCI6MTc0NTk3NTUyNn0.0BStWAwQLyUN_HTzGXzVxYPEUn5T2Rya4QkU7f3K_RY

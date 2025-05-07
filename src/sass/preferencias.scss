@@ -1,0 +1,99 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.page_preferencias {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    height: 100vh;
+}
+
+.container_pr {
+    max-width: 350px;
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem;
+
+    p {
+        text-align: center;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-family: v.$title;
+        color: v.$white;
+    }
+    .omitir{
+        text-align: right;
+        a{
+            text-decoration: underline;
+            color: v.$white;
+            &:hover{
+                color: v.$mainColor-low;
+            }
+        }
+    }
+}
+
+.grid_pref {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.optionpr {
+    background-color: v.$mainColor-strong;
+    color: v.$white;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    img{
+        margin-bottom: 1rem;
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+}
+.optionpr.selected {
+    color: v.$black;
+    background-color: v.$mainColor-low;  // Establece un color más destacado
+}
+
+.counter {
+    color: v.$white;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.page_preferencias .button {
+    background-color: v.$mainColor-strong;
+    color: v.$white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: not-allowed;
+        background-color: v.$mainColor-strong;
+        color: v.$white;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        background-color: v.$secondaryColor ;
+
+    }
+
+}

@@ -1,0 +1,116 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+header {
+    text-align: center;
+    margin-top: 2rem;
+    img {
+        // max-width: 140px;
+    }
+}
+
+main {
+    color: v.$white;
+    // background-color: v.$secondaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.hero-img { 
+    text-align: center;
+    margin-top: 0rem;
+    width: 100%;
+    img {
+        text-align: center;
+        width: 40%;
+        height: 25rem;
+        object-fit: cover;
+        // object-position: center;
+        object-position: 50% 5%;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+}
+.login-card {
+    background-color:v.$mainColor;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px v.$secondaryColor;
+    position: relative;
+    margin-top: -50px;
+    z-index: 10;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 5rem;
+}
+.container {
+    max-width: 350px;
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem;
+}
+
+.container-md {
+    max-width: 400px;
+}
+
+.form-control {
+    background-color:v.$mainColor;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid v.$secondaryColor;
+    color: v.$white;
+
+    &:focus {
+        background-color: v.$mainColor !important;
+        border-color: v.$secondaryColor;
+        box-shadow: none;
+        outline: none;
+        color: v.$mainColor-low;
+    }
+}
+
+input::placeholder {
+    // color: blue;
+    opacity: 1;
+}  
+a {
+    color: v.$white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: v.$secondaryColor;
+}
+
+.text-end {
+    text-align: center !important;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 1rem;
+    top: 2.8rem;
+    cursor: pointer;
+}
+
+.position-relative {
+    position: relative;
+}
+
